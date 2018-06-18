@@ -21,7 +21,7 @@
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/search.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -37,50 +37,55 @@
   </head>
 
   <body>
-
-    <div class="container">
-      <!-- Header -->
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills pull-right">
-            <!-- Connexion/Inscription links -->
-            <li role="presentation"><a href="#" id="connexion">Connexion</a></li>
-            <li role="presentation"><a href="#" id="inscription">Inscription</a></li>
-          </ul>
-        </nav>
-        <!-- Title -->
-        <h3 class="text-muted" id="title">Greenings</h3>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="header clearfix">
+          <nav>
+            <ul class="nav nav-pills pull-right">
+              <!-- Connexion/Inscription links -->
+              <li role="presentation"><a href="#" id="connexion">Connexion</a></li>
+              <li role="presentation"><a href="#" id="inscription">Inscription</a></li>
+            </ul>
+          </nav>
+          <!-- Title -->
+          <h3 class="text-muted" id="title">Greenings</h3>
+        </div>
       </div>
+    </header>
 
+    <div class="container content" id="container">
       <form class="form-horizontal">
         <fieldset>
-        
-        <!-- Text input-->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="textinput">Localisation</label>  
-            <div class="col-md-8">
-              <input id="textinput" name="textinput" type="text" placeholder="Recherchez un endroit près de chez vous" class="form-control input-md">
-              <span class="help-block">Par exemple : Paris, Cergy...</span>  
-            </div>
-        </div>
-        
-        <!-- Button -->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="singlebutton"></label>
-            <div class="col-md-4">
-              <button id="singlebutton" name="singlebutton" class="btn btn-default">Recherche</button>
-            </div>
-        </div>
-        
+          
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">Localisation</label>  
+              <div class="col-md-8">
+                <input id="textinput" name="textinput" type="text" placeholder="Recherchez un endroit près de chez vous" class="form-control input-md">
+                <span class="help-block">Par exemple : Paris, Cergy...</span>  
+              </div>
+          </div>
+          
+          <!-- Button -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="singlebutton"></label>
+              <div class="col-md-4">
+                <button id="singlebutton" name="singlebutton" class="btn btn-default">Recherche</button>
+              </div>
+          </div>
+          
         </fieldset>
       </form>
+    </div>
 
-      <!-- Footer -->
-      <footer class="footer navbar navbar-fixed-bottom">
-          <p>&copy; 2018 Entreprise Red, Inc.</p>
+    <!-- Footer -->
+    
+    <div class="container">
+      <footer class="footer">
+        <p>&copy; 2018 Entreprise Red, Inc.</p>
       </footer>
-
-    </div> <!-- /container -->
+    </div>
 
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

@@ -36,20 +36,24 @@
 
   <body>
 
-    <div class="container">
-      <!-- Header -->
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills pull-right">
-            <!-- Connexion/Inscription links -->
-            <li role="presentation"><a href="#" id="connexion">Connexion</a></li>
-            <li role="presentation"><a href="#" id="inscription">Inscription</a></li>
-          </ul>
-        </nav>
-        <!-- Title -->
-        <h3 class="text-muted" id="title">Greenings</h3>
+    <!-- Header -->
+    <header>
+      <div class="container">
+          <div class="header clearfix">
+              <nav>
+                <ul class="nav nav-pills pull-right">
+                  <!-- Connexion/Inscription links -->
+                  <li role="presentation"><a href="#" id="connexion">Connexion</a></li>
+                  <li role="presentation"><a href="#" id="inscription">Inscription</a></li>
+                </ul>
+              </nav>
+              <!-- Title -->
+              <h3 class="text-muted" id="title">Greenings</h3>
+          </div>
       </div>
+    </header>
 
+    <div class="container content" id="container">
       <!-- Jumbotron -->
       <div class="jumbotron">
         <!-- Welcome message -->
@@ -127,13 +131,14 @@
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Footer -->
+    <!-- Footer -->
+    <div class="container">
       <footer class="footer">
         <p>&copy; 2018 Entreprise Red, Inc.</p>
       </footer>
-
-    </div> <!-- /container -->
+    </div>
 
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

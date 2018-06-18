@@ -4,6 +4,10 @@ body {
   padding-bottom: 20px;
 }
 
+#container{
+  min-height: 75vh;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
