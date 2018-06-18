@@ -62,6 +62,30 @@ body {
   margin-top: 28px;
 }
 
+/* Custom title */
+#title{
+  font-size: 45px;
+  font-family: 'Kaushan Script', cursive;
+  color: green;
+}
+
+/* Connexion and Inscription color */
+#connexion,
+#inscription{
+  color: #3CB371;
+}
+
+/* Lines style */
+hr.style1{
+	border-top: 1px solid #8c8b8b;
+}
+
+/* Community events style */
+#cevent {
+  background-color: #eeeeee;
+  padding: 10px;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   /* Remove the padding we set earlier */
@@ -79,24 +103,4 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
-}
-
-#title{
-  font-size: 45px;
-  font-family: 'Kaushan Script', cursive;
-  color: green;
-}
-
-#connexion,
-#inscription{
-  color: #3CB371;
-}
-
-hr.style1{
-	border-top: 1px solid #8c8b8b;
-}
-
-#pevenement {
-  background-color: #eeeeee;
-  padding: 10px;
 }

@@ -4,9 +4,8 @@ body {
     padding-bottom: 20px;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
+/* Side spacing for mobile first views */
 .header,
-.marketing,
 .footer {
     padding-right: 15px;
     padding-left: 15px;
@@ -24,8 +23,6 @@ body {
     line-height: 40px;
 }
 
-
-
 /* Custom page footer */
 .footer {
     height: 70px;
@@ -35,6 +32,29 @@ body {
     padding-top: 19px;
     color: #8FBC8F;
     border-top: 1px solid black;
+}
+
+/* Custom title */
+#title{
+    font-size: 45px;
+    font-family: 'Kaushan Script', cursive;
+    color: green;
+}
+
+/* Connexion and Inscription color */
+#connexion,
+#inscription{
+    color: #3CB371;
+}
+
+/* Lines style */
+hr.style1{
+    border-top: 1px solid #8c8b8b;
+}
+
+/* Form length limit */
+.form-horizontal{
+    width: 80%;
 }
 
 /* Customize container */
@@ -59,23 +79,4 @@ body {
     .header {
         margin-bottom: 30px;
     }
-}
-
-#title{
-    font-size: 45px;
-    font-family: 'Kaushan Script', cursive;
-    color: green;
-}
-
-#connexion,
-#inscription{
-    color: #3CB371;
-}
-
-hr.style1{
-    border-top: 1px solid #8c8b8b;
-}
-
-.form-horizontal{
-    width: 80%;
 }
