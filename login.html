@@ -42,47 +42,51 @@
     <header>
       <div class="container">
         <div class="header clearfix">
-          <!-- Title -->
+          <!-- Title and link to homepage -->
           <h3 class="text-muted"> <a href="index.html" id="title">Greenings</a></h3>
         </div>
       </div>
     </header>
 
     <div class="container content" id="container">
-        <form class="form-horizontal">
-            <fieldset>
-                
-                <!-- Text input-->
-                <div class="form-group">
-                <label class="col-md-4 control-label" for="textinput">Adresse mail</label>  
-                <div class="col-md-8">
+      <!-- Login form -->
+      <form class="form-horizontal">
+        <fieldset>
+
+          <!-- Form Name -->
+          <legend>Connexion</legend>
+              
+          <!-- Text input-->
+          <div class="form-group">
+            <!-- Login -->
+            <label class="col-md-4 control-label" for="textinput">Adresse mail</label>  
+            <div class="col-md-4">
+              <input id="textinput" name="textinput" type="text" class="form-control input-md">
+            </div>
+          </div>
+            
+          <!-- Text input-->
+          <div class="form-group">
+            <!-- Password -->
+            <label class="col-md-4 control-label" for="textinput">Mot de passe</label>  
+              <div class="col-md-4">
                 <input id="textinput" name="textinput" type="text" class="form-control input-md">
-                <span class="help-block">Par exemple : bob.Marley@gmail.com...</span>  
-                </div>
-                </div>
-                
-                <!-- Text input-->
-                <div class="form-group">
-                        <label class="col-md-4 control-label" for="textinput">Mot de passe</label>  
-                        <div class="col-md-8">
-                        <input id="textinput" name="textinput" type="text" class="form-control input-md">
-                        </div>
-                    </div>
-    
-                <!-- Button -->
-                <div class="form-group">
-                <label class="col-md-4 control-label" for="singlebutton"></label>
-                <div class="col-md-4">
-                    <button id="singlebutton" name="singlebutton" class="btn btn-default">Valider</button>
-                </div>
-                </div>
-                
-            </fieldset>
-        </form>
+              </div>
+          </div>
+
+          <!-- Button -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="singlebutton"></label>
+              <div class="col-md-4">
+                <button id="singlebutton" name="singlebutton" class="btn btn-default">Connexion</button>
+              </div>
+          </div>
+              
+        </fieldset>
+      </form>
     </div>
 
     <!-- Footer -->
-    
     <div class="container">
       <footer class="footer">
         <p>&copy; 2018 Entreprise Red, Inc.</p>
