@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
     <!--Title-->
-    <title>Rechercher un évènement - Greenings</title>
+    <title>Inscription - Greenings</title>
     
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
@@ -42,56 +42,55 @@
     <header>
       <div class="container">
         <div class="header clearfix">
-          <!-- Title -->
+          <div class ="nav nav-pills pull-right">
+            <!-- Connection link -->
+            <li role="presentation"><a href="login.html" id="login">Vous avez déjà un compte ? Connectez-vous !</a>
+          </div>
+          <!-- Title and link to homepage -->
           <h3 class="text-muted"> <a href="index.html" id="title">Greenings</a></h3>
         </div>
       </div>
     </header>
 
     <div class="container content" id="container">
-        <form class="form-horizontal">
-            <fieldset>
-                
-                <!-- Text input-->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="textinput">Adresse mail</label>  
-                    <div class="col-md-8">
-                    <input id="textinput" name="textinput" type="text" class="form-control input-md">
-                    <span class="help-block">Par exemple : bob.Marley@gmail.com...</span>  
-                    </div>
-                </div>
-                
-                <!-- Text input-->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="textinput">Mot de passe</label>  
-                    <div class="col-md-8">
-                    <input id="textinput" name="textinput" type="text" class="form-control input-md">
-                    </div>
-                </div>
-                
-                <!-- Text input-->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="textinput">Créez votre mot de passe</label>  
-                    <div class="col-md-8">
-                    <input id="textinput" name="textinput" type="text" class="form-control input-md">
-                    </div>
-                </div>
-                    
+      <!-- Login form -->
+      <form class="form-horizontal">
+        <fieldset>
 
-                <!-- Button -->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="singlebutton"></label>
-                    <div class="col-md-4">
-                    <button id="singlebutton" name="singlebutton" class="btn btn-default">S'inscrire</button>
-                    </div>
-                </div>
-                
-            </fieldset>
-        </form>
+          <!-- Form Name -->
+          <legend>Inscription</legend>
+              
+          <!-- Text input-->
+          <div class="form-group">
+            <!-- Login -->
+            <label class="col-md-4 control-label" for="textinput">Votre adresse mail</label>  
+            <div class="col-md-4">
+              <input id="textinput" name="textinput" type="text" class="form-control input-md">
+            </div>
+          </div>
+            
+          <!-- Text input-->
+          <div class="form-group">
+            <!-- Password -->
+            <label class="col-md-4 control-label" for="textinput">Choisissez un mot de passe</label>  
+              <div class="col-md-4">
+                <input id="textinput" name="textinput" type="text" class="form-control input-md">
+              </div>
+          </div>
+
+          <!-- Button -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="singlebutton"></label>
+              <div class="col-md-4">
+                <button id="singlebutton" name="singlebutton" class="btn btn-default">Inscription</button>
+              </div>
+          </div>
+              
+        </fieldset>
+      </form>
     </div>
 
     <!-- Footer -->
-    
     <div class="container">
       <footer class="footer">
         <p>&copy; 2018 Entreprise Red, Inc.</p>

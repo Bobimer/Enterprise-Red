@@ -74,8 +74,8 @@ body {
 }
 
 /* Connexion and Inscription color */
-#connexion,
-#inscription{
+#login,
+#signup{
   color: #3CB371;
 }
 
