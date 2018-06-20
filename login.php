@@ -61,10 +61,20 @@
 
           <!-- Form Name -->
           <legend>Connexion</legend>
-              
+          
+
           <!-- Text input-->
           <div class="form-group">
             <!-- Login -->
+            <label class="col-md-4 control-label" for="textinput">Pseudo</label>  
+            <div class="col-md-4">
+              <input id="textinput" name="textinput" type="text" class="form-control input-md">
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <!-- Mail -->
             <label class="col-md-4 control-label" for="textinput">Adresse mail</label>  
             <div class="col-md-4">
               <input id="textinput" name="textinput" type="text" class="form-control input-md">
