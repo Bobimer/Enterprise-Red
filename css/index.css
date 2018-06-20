@@ -71,6 +71,7 @@ body {
   font-size: 45px;
   font-family: 'Kaushan Script', cursive;
   color: green;
+  text-decoration: none;
 }
 
 legend {
