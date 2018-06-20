@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Jun 15, 2018 at 02:37 PM
+-- Generation Time: Jun 20, 2018 at 09:20 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -62,19 +62,17 @@ CREATE TABLE `users` (
   `id_user` int(11) NOT NULL,
   `user_login` varchar(40) NOT NULL,
   `user_email` varchar(100) NOT NULL,
-  `user_pwd` varchar(100) NOT NULL,
-  `user_points` int(11) NOT NULL,
-  `user_newsletter` tinyint(1) NOT NULL
+  `user_pwd` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id_user`, `user_login`, `user_email`, `user_pwd`, `user_points`, `user_newsletter`) VALUES
-(1, 'lealablg', 'blg78@gmail.com', 'prout', 2, 0),
-(3, 'toto3000', 'toto3000@hotmail.fr', 'toto', 8, 1),
-(4, 'Beyonce', 'queen-b@gmail.com', 'blueivy', 1000, 1);
+INSERT INTO `users` (`id_user`, `user_login`, `user_email`, `user_pwd`) VALUES
+(1, 'lealablg', 'blg78@gmail.com', 'prout'),
+(3, 'toto3000', 'toto3000@hotmail.fr', 'toto'),
+(4, 'Beyonce', 'queen-b@gmail.com', 'blueivy');
 
 --
 -- Indexes for dumped tables
