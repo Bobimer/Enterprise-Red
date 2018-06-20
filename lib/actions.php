@@ -5,6 +5,7 @@ ini_set('error_reporting', E_ALL);
 
 include ('includes/db_connect.inc.php');
 include ('includes/sign_up.inc.php');
+include ('includes/sign_in.inc.php');
 
 switch(@$_POST["action"]) {
     default: break;

@@ -1,4 +1,8 @@
+<?php 
+include('lib/actions.php');
 
+$db = db_connect();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
