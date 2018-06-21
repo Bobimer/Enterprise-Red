@@ -82,10 +82,9 @@
                 </div>
 
                 <div class="form-group">
-                    <!-- Event date -->
-                    <label class="col-md-4 control-label" for="textinput">Date et heure</label>
+                    <label class="col-md-4 control-label">Date et heure</label>
                     <div class="col-md-4">
-                        <input id="textinput" name="textinput" type="text" placeholder="Date et heure" class="form-control input-md">
+                        <input class="form-control" type="datetime-local" id="datetime">
                         <span class="help-block">Indiquez une date et une heure de rendez-vous</span>
                     </div>
                 </div>
