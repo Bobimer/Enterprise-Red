@@ -21,7 +21,6 @@ switch(@$_POST["action"]) {
         
     case "signin":
         
-        //$mail = $_POST['mail'];
         $login = $_POST['login'];
         $pwd = $_POST['pwd'];
         $errors = signin($login, $pwd);

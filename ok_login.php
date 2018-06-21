@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
     <!--Title-->
-    <title>Inscription réussie - Greenings</title>
+    <title>Connexion réussie - Greenings</title>
     
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Poppins" rel="stylesheet">
@@ -37,7 +37,7 @@
     <?php include('includes/header.inc.php'); ?>
 
     <div class="container content" id="container">
-      <p>Félicitations vous êtes inscrit !</p>
+      <p>Félicitations vous êtes connecté !</p>
       <a href="index.php">Retour vers la page d'accueil</a>
     </div>
 
