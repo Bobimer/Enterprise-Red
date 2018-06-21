@@ -60,7 +60,8 @@ $db = db_connect();
 
     <div class="container content" id="container">
       <!-- Login form -->
-      <form class="form-horizontal">
+      <form method="post" class="form-horizontal">
+        <input type="hidden" name="action" value="signin">
         <fieldset>
 
           <!-- Form Name -->
@@ -72,25 +73,25 @@ $db = db_connect();
             <!-- Login -->
             <label class="col-md-4 control-label" for="textinput">Pseudo</label>  
             <div class="col-md-4">
-              <input id="textinput" name="textinput" type="text" class="form-control input-md">
+              <input id="textinput" name="login" type="text" class="form-control input-md">
             </div>
           </div>
 
           <!-- Text input-->
-          <div class="form-group">
+          <!--<div class="form-group">-->
             <!-- Mail -->
-            <label class="col-md-4 control-label" for="textinput">Adresse mail</label>  
+            <!--<label class="col-md-4 control-label" for="textinput">Adresse mail</label>  
             <div class="col-md-4">
               <input id="textinput" name="textinput" type="text" class="form-control input-md">
             </div>
-          </div>
+          </div>-->
             
           <!-- Text input-->
           <div class="form-group">
             <!-- Password -->
             <label class="col-md-4 control-label" for="textinput">Mot de passe</label>  
               <div class="col-md-4">
-                <input id="textinput" name="textinput" type="text" class="form-control input-md">
+                <input id="password" name="pwd" type="password" class="form-control input-md">
               </div>
           </div>
 

@@ -6,7 +6,7 @@ ini_set('error_reporting', E_ALL);
 include ('includes/db_connect.inc.php');
 include ('includes/sign_up.inc.php');
 include ('includes/sign_in.inc.php');
-include ('includes/create_event.inc.php');
+//include ('includes/create_event.inc.php');
 
 switch(@$_POST["action"]) {
     default: break;
@@ -19,16 +19,15 @@ switch(@$_POST["action"]) {
         $errors = signup($login, $mail, $pwd);
         break;
         
-    case "login":
+    case "signin":
         
-        $mail = $_POST['mail'];
+        //$mail = $_POST['mail'];
         $login = $_POST['login'];
         $pwd = $_POST['pwd'];
-        
-        $errors = login($login, $mail, $pwd);
+        $errors = signin($login, $pwd);
         break;
         
-     case "create":
+     /*case "create":
         
         $date = $_POST['date'];
         $name = $_POST['name'];
@@ -37,7 +36,7 @@ switch(@$_POST["action"]) {
         $desc = $_POST['desc'];
         
         $errors = create($login, $mail, $pwd);
-        break;
+        break;*/
 }
 
 

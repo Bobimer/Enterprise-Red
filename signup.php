@@ -60,7 +60,7 @@ include('lib/actions.php');
     <div class="container content" id="container">
       <!-- Login form -->
       <form method="post" class="form-horizontal">
-          <input type="hidden" name="action" value="signup">
+        <input type="hidden" name="action" value="signup">
         <fieldset>
 
           <!-- Form Name -->
