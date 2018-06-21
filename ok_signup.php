@@ -44,10 +44,10 @@
           <div class="header clearfix">
             <div class ="nav nav-pills pull-right">
               <!-- Inscription link -->
-              <li role="presentation"><a href="signup.html" id="signup">Vous n'avez pas de compte ? Inscrivez-vous !</a>
+              <li role="presentation"><a href="signup.php" id="signup">Vous n'avez pas de compte ? Inscrivez-vous !</a>
             </div>
             <!-- Title and link to homepage -->
-            <h3 class="text-muted"> <a href="index.html" id="title">Greenings</a></h3>
+            <h3 class="text-muted"> <a href="index.php" id="title">Greenings</a></h3>
           </div>
         </div>
       </header>

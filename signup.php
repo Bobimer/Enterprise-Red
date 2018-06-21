@@ -49,10 +49,10 @@ include('lib/actions.php');
         <div class="header clearfix">
           <div class ="nav nav-pills pull-right">
             <!-- Connection link -->
-            <li role="presentation"><a href="login.html" id="login">Vous avez déjà un compte ? Connectez-vous !</a>
+            <li role="presentation"><a href="login.php" id="login">Vous avez déjà un compte ? Connectez-vous !</a>
           </div>
           <!-- Title and link to homepage -->
-          <h3 class="text-muted"> <a href="index.html" id="title">Greenings</a></h3>
+          <h3 class="text-muted"> <a href="index.php" id="title">Greenings</a></h3>
         </div>
       </div>
     </header>

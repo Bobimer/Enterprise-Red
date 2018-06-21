@@ -67,8 +67,8 @@ $db = db_connect();
         <p class="lead">Rejoignez le mouvement et participez à des évènements ou proposez les vôtres afin de rendre nos rues plus propres ensemble !</p>
         <p></p>
         <!-- Event search and creation buttons -->
-        <a class="btn btn-lg btn-success" href="create.html" role="button">Créer un évènement &raquo;</a>
-        <a class="btn btn-lg btn-success" href="search.html" role="button">Rechercher un évènement &raquo;</a>
+        <a class="btn btn-lg btn-success" href="create.php" role="button">Créer un évènement &raquo;</a>
+        <a class="btn btn-lg btn-success" href="search.php" role="button">Rechercher un évènement &raquo;</a>
       </div>
 
       <!-- Line division -->
@@ -86,7 +86,7 @@ $db = db_connect();
             nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
           <p>
             <!-- Access button -->
-            <a class="btn btn-success" href="event.html" role="button">Voir cet évènement &raquo;</a>
+            <a class="btn btn-success" href="event.php" role="button">Voir cet évènement &raquo;</a>
           </p>
         </div>
       </div>
@@ -106,7 +106,7 @@ $db = db_connect();
             <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
             <p>
               <!-- Access button -->
-              <a class="btn btn-success" href="event.html" role="button">Voir cet évènement &raquo;</a>
+              <a class="btn btn-success" href="event.php" role="button">Voir cet évènement &raquo;</a>
             </p>
           </div>
         </div>
@@ -119,7 +119,7 @@ $db = db_connect();
             <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
             <p>
               <!-- Access button -->
-              <a class="btn btn-success" href="event.html" role="button">Voir cet évènement &raquo;</a>
+              <a class="btn btn-success" href="event.php" role="button">Voir cet évènement &raquo;</a>
             </p>
           </div>
         </div>
@@ -132,7 +132,7 @@ $db = db_connect();
             <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
             <p>
               <!-- Access button -->
-              <a class="btn btn-success" href="event.html" role="button">Voir cet évènement &raquo;</a>
+              <a class="btn btn-success" href="event.php" role="button">Voir cet évènement &raquo;</a>
             </p>
           </div>
         </div>

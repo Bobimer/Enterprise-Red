@@ -45,12 +45,12 @@
                 <nav>
                 <ul class="nav nav-pills pull-right">
                     <!-- Connexion/Inscription links -->
-                    <li role="presentation"><a href="login.html" id="login">Connexion</a></li>
-                    <li role="presentation"><a href="signup.html" id="signup">Inscription</a></li>
+                    <li role="presentation"><a href="login.php" id="login">Connexion</a></li>
+                    <li role="presentation"><a href="signup.php" id="signup">Inscription</a></li>
                 </ul>
                 </nav>
                 <!-- Title and link to homepage-->
-                <h3 class="text-muted"> <a href="index.html" id="title">Greenings</a></h3>
+                <h3 class="text-muted"> <a href="index.php" id="title">Greenings</a></h3>
             </div>
         </div>
     </header>
