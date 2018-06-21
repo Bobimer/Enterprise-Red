@@ -47,10 +47,15 @@ $db = db_connect();
       <div class="container">
           <div class="header clearfix">
               <nav>
-                <ul class="nav nav-pills pull-right">
-                  <!-- Connexion/Inscription links -->
-                  <li role="presentation"><a href="login.php" id="login">Connexion</a></li>
-                  <li role="presentation"><a href="signup.php" id="signup">Inscription</a></li>
+                <!-- Connexion/Inscription links -->
+                <ul class="nav nav-pills pull-right loggedout">
+                  <li role="login"><a href="login.php" id="login">Connexion</a></li>
+                  <li role="signup"><a href="signup.php" id="signup">Inscription</a></li>
+                </ul>
+                <!-- Show account -->
+                <ul class="nav nav-pills pull-right loggedin">
+                  <li role="account"><a href="profile.php" id="account">Compte</a></li>
+                  <li role="disconnect"><a href=# id="disconnect">Déconnexion</a></li>
                 </ul>
               </nav>
               <!-- Title and link to homepage -->

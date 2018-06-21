@@ -80,7 +80,9 @@ legend {
 
 /* Connexion and Inscription color */
 #login,
-#signup{
+#signup,
+#account,
+#disconnect{
   color: #3CB371;
 }
 
@@ -93,6 +95,14 @@ hr.style1{
 #cevent {
   background-color: #eeeeee;
   padding: 10px;
+}
+
+.loggedout {
+  display: none;
+}
+
+.loggedin{
+  /*display: none;*/
 }
 
 /* Responsive: Portrait tablets and up */
