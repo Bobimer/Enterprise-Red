@@ -18,7 +18,7 @@ $db = db_connect();
     <title>Accueil - Greenings</title>
 
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Poppins" rel="stylesheet">
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -86,7 +86,7 @@ $db = db_connect();
             nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
           <p>
             <!-- Access button -->
-            <a class="btn btn-default" href="event.html" role="button">Voir cet évènement &raquo;</a>
+            <a class="btn btn-success" href="event.html" role="button">Voir cet évènement &raquo;</a>
           </p>
         </div>
       </div>
@@ -106,7 +106,7 @@ $db = db_connect();
             <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
             <p>
               <!-- Access button -->
-              <a class="btn btn-default" href="event.html" role="button">Voir cet évènement &raquo;</a>
+              <a class="btn btn-success" href="event.html" role="button">Voir cet évènement &raquo;</a>
             </p>
           </div>
         </div>
@@ -119,7 +119,7 @@ $db = db_connect();
             <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
             <p>
               <!-- Access button -->
-              <a class="btn btn-default" href="event.html" role="button">Voir cet évènement &raquo;</a>
+              <a class="btn btn-success" href="event.html" role="button">Voir cet évènement &raquo;</a>
             </p>
           </div>
         </div>
@@ -132,7 +132,7 @@ $db = db_connect();
             <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
             <p>
               <!-- Access button -->
-              <a class="btn btn-default" href="event.html" role="button">Voir cet évènement &raquo;</a>
+              <a class="btn btn-success" href="event.html" role="button">Voir cet évènement &raquo;</a>
             </p>
           </div>
         </div>

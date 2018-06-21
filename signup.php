@@ -18,7 +18,7 @@ include('lib/actions.php');
     <title>Inscription - Greenings</title>
     
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Poppins" rel="stylesheet">
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -97,7 +97,7 @@ include('lib/actions.php');
           <div class="form-group">
             <label class="col-md-4 control-label" for="singlebutton"></label>
               <div class="col-md-4">
-                <button type="submit" id="singlebutton" class="btn btn-default">Inscription</button>
+                <button type="submit" id="singlebutton" class="btn btn-success">Inscription</button>
               </div>
           </div>
               
