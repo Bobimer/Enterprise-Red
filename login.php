@@ -59,7 +59,7 @@ $db = db_connect();
     <div class="container content" id="container">
       <!-- Login form -->
       <form method="post" class="form-horizontal">
-        <input type="hidden" name="action" value="signin">
+        <input type="hidden" name="action" value="login">
         <fieldset>
 
           <!-- Form Name -->

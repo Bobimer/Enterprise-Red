@@ -38,7 +38,9 @@
 
     <div class="container content" id="container">
       <p>Félicitations vous êtes inscrit !</p>
-      <a href="index.php">Retour vers la page d'accueil</a>
+      <a href="login.php">Connectez-vous</a>
+      <p>ou</p>
+      <a href="index.php">Retournez à la page d'accueil</a>
     </div>
 
     <?php include('includes/footer.inc.php'); ?>

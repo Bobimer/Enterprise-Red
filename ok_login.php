@@ -37,7 +37,7 @@
     <?php include('includes/header.inc.php'); ?>
 
     <div class="container content" id="container">
-      <p>Félicitations vous êtes connecté !</p>
+      <p>Félicitations, vous êtes connecté !</p>
       <a href="index.php">Retour vers la page d'accueil</a>
     </div>
 

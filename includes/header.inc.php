@@ -9,7 +9,7 @@
                   echo
                   '<!-- Show account -->
                   <ul class="nav nav-pills pull-right">
-                    <li role="account"><a href="profile.php" id="account">Compte</a></li>
+                    <li role="account"><a href="account.php" id="account">Compte</a></li>
                     <li role="disconnect"><a href="includes/logout.inc.php" id="disconnect">Déconnexion</a></li>
                   </ul>';
                 } else {

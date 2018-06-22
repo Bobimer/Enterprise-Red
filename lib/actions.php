@@ -4,8 +4,8 @@ error_reporting(E_ALL & ~E_NOTICE);
 ini_set('error_reporting', E_ALL);
 
 include ('includes/db_connect.inc.php');
-include ('includes/sign_up.inc.php');
-include ('includes/sign_in.inc.php');
+include ('includes/signup.inc.php');
+include ('includes/login.inc.php');
 //include ('includes/create_event.inc.php');
 
 switch(@$_POST["action"]) {
@@ -19,11 +19,11 @@ switch(@$_POST["action"]) {
         $errors = signup($login, $mail, $pwd);
         break;
         
-    case "signin":
+    case "login":
         
         $login = $_POST['login'];
         $pwd = $_POST['pwd'];
-        $errors = signin($login, $pwd);
+        $errors = login($login, $pwd);
         break;
         
      /*case "create":
