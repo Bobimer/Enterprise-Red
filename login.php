@@ -40,12 +40,12 @@ $db = db_connect();
   </head>
 
   <body>
-    <!-- Header -->
+    <!-- Custom header -->
     <header>
           <div class="container">
               <div class="header clearfix">
                   <nav>
-                    <!-- Connexion/Inscription links -->
+                    <!-- Signup link -->
                     <ul class="nav nav-pills pull-right loggedout">
                       <li role="signup"><a href="signup.php" id="signup">Vous n'avez pas de compte ? Inscrivez-vous !</a></li>
                     </ul>
@@ -96,6 +96,7 @@ $db = db_connect();
       </form>
     </div>
 
+    <!-- Footer -->
     <?php include('includes/footer.inc.php'); ?>
 
 

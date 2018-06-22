@@ -35,6 +35,7 @@
   <body>
 
     <div class="container">
+      <!-- Header -->
       <?php include('includes/header.inc.php'); ?>
       
       <div class="container" id="container">
@@ -44,7 +45,7 @@
         <!-- Form Name -->
         <legend>Votre profil</legend>
 
-        <!-- Login input-->
+        <!-- Login change -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="login">Changez votre pseudo</label>  
           <div class="col-md-4">
@@ -52,7 +53,7 @@
           </div>
         </div>
         
-        <!-- Mail input-->
+        <!-- Mail change -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="mail">Changez votre adresse mail</label>  
           <div class="col-md-4">
@@ -60,7 +61,7 @@
           </div>
         </div>
         
-        <!-- Password input-->
+        <!-- Password change -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="passwordinput">Changez votre mot de passe</label>
           <div class="col-md-4">
@@ -69,7 +70,7 @@
           </div>
         </div>
         
-        <!-- Button -->
+        <!-- Save changes button -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="singlebutton">Valider les changements</label>
           <div class="col-md-4">
@@ -77,11 +78,11 @@
           </div>
         </div>
         
-        <!-- Button -->
+        <!-- Delete account button -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="singlebutton">Supprimer le compte</label>
           <div class="col-md-4">
-            <button id="singlebutton" name="singlebutton" class="btn btn-danger">Supprimer</button>
+            <button id="singlebutton" name="btn-delete" class="btn btn-danger">Supprimer</button>
           </div>
         </div>
         
@@ -89,7 +90,8 @@
         </form>
         
         </div>
-    
+
+        <!-- Footer -->
         <?php include('includes/footer.inc.php'); ?>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

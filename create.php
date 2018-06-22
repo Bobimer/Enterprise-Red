@@ -33,6 +33,7 @@
   </head>
 
   <body>
+    <!-- Header -->
     <?php include('includes/header.inc.php'); ?>
 
     <div class="container content" id="container">
@@ -42,7 +43,6 @@
                 <!-- Form Name -->
                 <legend>Créer votre évènement</legend>
 
-                <!-- Text input-->
                 <div class="form-group">
                     <!-- Event name -->
                     <label class="col-md-4 control-label" for="event_name">Nom de l'évènement</label>
@@ -62,6 +62,7 @@
                 </div>
 
                 <div class="form-group">
+                    <!-- Event datetime -->
                     <label class="col-md-4 control-label">Date et heure</label>
                     <div class="col-md-4">
                         <input class="form-control" type="datetime-local" id="datetime">
@@ -93,7 +94,7 @@
                     </div>
                 </div>
 
-                <!-- Button -->
+                <!-- Save button -->
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="singlebutton"></label>
                     <div class="col-md-4">
@@ -105,6 +106,7 @@
         </form>
     </div>
 
+    <!-- Footer -->
     <?php include('includes/footer.inc.php'); ?>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

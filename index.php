@@ -37,6 +37,7 @@ $db = db_connect();
   </head>
 
   <body>
+    <!-- Header -->
     <?php include('includes/header.inc.php'); ?>
 
     <div class="container content" id="container">
@@ -119,6 +120,7 @@ $db = db_connect();
       </div>
     </div>
 
+    <!-- Footer -->
     <?php include('includes/footer.inc.php'); ?>
 
 
