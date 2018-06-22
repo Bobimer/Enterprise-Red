@@ -5,7 +5,7 @@
 		$host = "localhost";
 		$dbname = "greenings";
 		$user = "root";
-		$password = "root";
+		$password = "root"; // ou $password = "";
 		//$db = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
 		$db = new PDO(
 					"mysql:host=$host;dbname=$dbname", 

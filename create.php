@@ -1,5 +1,14 @@
 <?php
   session_start();
+
+  var_dump($_SESSION);
+if(isset($_SESSION['id_user'])){
+    echo "le pseudo du visiteur est :" . $_SESSION['id_user'];
+}
+
+include('lib/actions.php');
+
+$db = db_connect();
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +50,8 @@
     <?php include('includes/header.inc.php'); ?>
 
     <div class="container content" id="container">
-        <form class="form-horizontal">
+        <form method="post" class="form-horizontal">
+            <input type="hidden" name="action" value="create">
             <fieldset>
         
                 <!-- Form Name -->
@@ -51,7 +61,7 @@
                     <!-- Event name -->
                     <label class="col-md-4 control-label" for="event_name">Nom de l'évènement</label>
                     <div class="col-md-4">
-                        <input id="event_name" name="event_name" type="text" placeholder="Nom de l'évènement" class="form-control input-md">
+                        <input id="event_name" name="name" type="text" placeholder="Nom de l'évènement" class="form-control input-md">
                         <span class="help-block">Donnez un nom à votre évènement</span>
                     </div>
                 </div>
@@ -60,7 +70,7 @@
                     <!-- Event location -->
                     <label class="col-md-4 control-label" for="textarea">Lieu</label>
                     <div class="col-md-4">
-                        <input id="textinput" name="textinput" type="text" placeholder="Adresse, lieu public, parcours..." class="form-control input-md">
+                        <input id="textinput" name="place" type="text" placeholder="Adresse, lieu public, parcours..." class="form-control input-md">
                         <span class="help-block">Renseignez le point de rendez-vous</span>
                     </div>
                 </div>
@@ -69,7 +79,7 @@
                     <!-- Event datetime -->
                     <label class="col-md-4 control-label">Date et heure</label>
                     <div class="col-md-4">
-                        <input class="form-control" type="datetime-local" id="datetime">
+                        <input class="form-control" name="date" type="datetime-local" id="datetime">
                         <span class="help-block">Indiquez une date et une heure de rendez-vous</span>
                     </div>
                 </div>
@@ -78,7 +88,7 @@
                     <!-- Event description -->
                     <label class="col-md-4 control-label" for="textarea">Description</label>
                     <div class="col-md-4">
-                        <textarea class="form-control" id="textarea" name="Description" placeholder="Description"></textarea>
+                        <textarea class="form-control" id="textarea" name="desc" placeholder="Description"></textarea>
                         <span class="help-block">Décrivez l'évènement</span>
                     </div>
                 </div>
@@ -87,9 +97,9 @@
                     <!-- Event theme -->
                     <label class="col-md-4 control-label" for="selectbasic">Thème</label>
                     <div class="col-md-4">
-                        <select id="selectbasic" name="selectbasic" class="form-control">
+                        <select id="selectbasic" name="theme" class="form-control">
                             <option value="1">Ramassage simple</option>
-                            <option value="2">Ballade</option>
+                            <option value="2">Balade</option>
                             <option value="3">Ludique</option>
                             <option value="4">Sport</option>
                             <option value="5">Autres</option>
