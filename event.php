@@ -23,10 +23,6 @@
     <!-- Custom styles for this template -->
     <link href="css/index.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="js/ie-emulation-modes-warning.js"></script>
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -39,18 +35,8 @@
   <body>
 
     <div class="container">
-      <!-- Header -->
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills pull-right">
-            <!-- Connexion/Inscription links -->
-            <li role="presentation"><a href="login.php" id="login">Connexion</a></li>
-            <li role="presentation"><a href="signup.php" id="signup">Inscription</a></li>
-          </ul>
-        </nav>
-        <!-- Title and link to homepage -->
-        <h3 class="text-muted"> <a href="index.php" id="title">Greenings</a></h3>
-      </div>
+      <?php include('includes/header.inc.php'); ?>
+
     <div class="container" id="container">
       <h2>Nom</h2>
       <h4>Lieu</h4>      
@@ -64,12 +50,7 @@
       </ul>
     </div>
     
-    <div class="container">
-      <!-- Footer -->
-      <footer class="footer">
-        <p>&copy; 2018 Entreprise Red, Inc.</p>
-      </footer>
-    </div>
+    <?php include('includes/footer.inc.php'); ?>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>

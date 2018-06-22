@@ -16,12 +16,12 @@ $db = db_connect();
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
     <!--Title-->
-    <title>Rechercher un évènement - Greenings</title>
+    <title>Connexion - Greenings</title>
     
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Poppins" rel="stylesheet">
 
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap corse CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
@@ -29,10 +29,6 @@ $db = db_connect();
 
     <!-- Custom styles for this template -->
     <link href="css/index.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -46,21 +42,24 @@ $db = db_connect();
   <body>
     <!-- Header -->
     <header>
-        <div class="container">
-          <div class="header clearfix">
-            <div class ="nav nav-pills pull-right">
-              <!-- Inscription link -->
-              <li role="presentation"><a href="signup.php" id="signup">Vous n'avez pas de compte ? Inscrivez-vous !</a>
-            </div>
-            <!-- Title and link to homepage -->
-            <h3 class="text-muted"> <a href="index.php" id="title">Greenings</a></h3>
+          <div class="container">
+              <div class="header clearfix">
+                  <nav>
+                    <!-- Connexion/Inscription links -->
+                    <ul class="nav nav-pills pull-right loggedout">
+                      <li role="signup"><a href="signup.php" id="signup">Vous n'avez pas de compte ? Inscrivez-vous !</a></li>
+                    </ul>
+                  </nav>
+                  <!-- Title and link to homepage -->
+              <h3 class="text-muted"> <a href="index.php" id="title">Greenings</a></h3>
           </div>
-        </div>
-      </header>
+      </div>
+    </header>
 
     <div class="container content" id="container">
       <!-- Login form -->
-      <form class="form-horizontal">
+      <form method="post" class="form-horizontal">
+        <input type="hidden" name="action" value="signin">
         <fieldset>
 
           <!-- Form Name -->
@@ -70,27 +69,18 @@ $db = db_connect();
           <!-- Text input-->
           <div class="form-group">
             <!-- Login -->
-            <label class="col-md-4 control-label" for="textinput">Pseudo</label>  
+            <label class="col-md-4 control-label" for="login">Pseudo</label>  
             <div class="col-md-4">
-              <input id="textinput" name="textinput" type="text" class="form-control input-md">
-            </div>
-          </div>
-
-          <!-- Text input-->
-          <div class="form-group">
-            <!-- Mail -->
-            <label class="col-md-4 control-label" for="textinput">Adresse mail</label>  
-            <div class="col-md-4">
-              <input id="textinput" name="textinput" type="text" class="form-control input-md">
+              <input id="login" name="login" type="text" class="form-control input-md">
             </div>
           </div>
             
           <!-- Text input-->
           <div class="form-group">
             <!-- Password -->
-            <label class="col-md-4 control-label" for="textinput">Mot de passe</label>  
+            <label class="col-md-4 control-label" for="pwd">Mot de passe</label>  
               <div class="col-md-4">
-                <input id="textinput" name="textinput" type="text" class="form-control input-md">
+                <input id="pwd" name="pwd" type="password" class="form-control input-md">
               </div>
           </div>
 
@@ -106,12 +96,7 @@ $db = db_connect();
       </form>
     </div>
 
-    <!-- Footer -->
-    <div class="container">
-      <footer class="footer">
-        <p>&copy; 2018 Entreprise Red, Inc.</p>
-      </footer>
-    </div>
+    <?php include('includes/footer.inc.php'); ?>
 
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

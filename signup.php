@@ -29,10 +29,6 @@ include('lib/actions.php');
     <!-- Custom styles for this template -->
     <link href="css/index.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="js/ie-emulation-modes-warning.js"></script>
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -45,22 +41,24 @@ include('lib/actions.php');
   <body>
     <!-- Header -->
     <header>
-      <div class="container">
-        <div class="header clearfix">
-          <div class ="nav nav-pills pull-right">
-            <!-- Connection link -->
-            <li role="presentation"><a href="login.php" id="login">Vous avez déjà un compte ? Connectez-vous !</a>
+          <div class="container">
+              <div class="header clearfix">
+                  <nav>
+                    <!-- Connexion/Inscription links -->
+                    <ul class="nav nav-pills pull-right loggedout">
+                      <li role="signup"><a href="login.php" id="login">Vous avez déjà un compte ? Connectez-vous !</a></li>
+                    </ul>
+                  </nav>
+                  <!-- Title and link to homepage -->
+              <h3 class="text-muted"> <a href="index.php" id="title">Greenings</a></h3>
           </div>
-          <!-- Title and link to homepage -->
-          <h3 class="text-muted"> <a href="index.php" id="title">Greenings</a></h3>
-        </div>
       </div>
     </header>
 
     <div class="container content" id="container">
       <!-- Login form -->
       <form method="post" class="form-horizontal">
-          <input type="hidden" name="action" value="signup">
+        <input type="hidden" name="action" value="signup">
         <fieldset>
 
           <!-- Form Name -->
@@ -105,12 +103,7 @@ include('lib/actions.php');
       </form>
     </div>
 
-    <!-- Footer -->
-    <div class="container">
-      <footer class="footer">
-        <p>&copy; 2018 Entreprise Red, Inc.</p>
-      </footer>
-    </div>
+    <?php include('includes/footer.inc.php'); ?>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>

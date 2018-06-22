@@ -1,5 +1,11 @@
 <?php
 
+    $mail = $_POST['mail'];
+    $login = $_POST['login'];
+    $pwd = $_POST['pwd'];
+        
+    $errors = signup($login, $mail, $pwd);
+
     function signup($login, $mail, $password) {
         $db = db_connect();
         

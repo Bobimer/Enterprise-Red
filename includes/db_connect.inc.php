@@ -1,4 +1,5 @@
 <?php
+
     function db_connect() {
         try {
 		$host = "localhost";

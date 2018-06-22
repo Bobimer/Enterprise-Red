@@ -80,7 +80,9 @@ legend {
 
 /* Connexion and Inscription color */
 #login,
-#signup{
+#signup,
+#account,
+#disconnect{
   color: #3CB371;
 }
 
