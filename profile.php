@@ -1,12 +1,9 @@
 <?php
 
 include ('includes/db_connect.inc.php');
-$db = db_connect();
-if (isset($_POST['']))
 
-($_POST['button'] == 'delete') {
+//while(['button'] == 'delete');
 
-}
 ?>
 
 
@@ -93,8 +90,18 @@ if (isset($_POST['']))
         <div class="form-group">
           <label class="col-md-4 control-label" for="singlebutton">Supprimer le compte</label>
           <div class="col-md-4">
-          <button type-"submit" id="button" name="singlebutton" class="btn btn-danger" value="value">Supprimer</button>
-
+          <button type-"submit" id="button" name="delete" class="btn btn-danger" value="delete">Supprimer</button>
+          <?php
+            if (isset($_REQUEST['delete'])) 
+            {
+                  $db = db_connect();
+                  $req = $db->prepare("DELETE FROM `users` WHERE id_user = :id");
+                  $req->execute(array(
+                    "id" => 9,
+                    //$_POST['id_user']
+                  ));
+            }            
+          ?>
           </div>
         </div>
         
