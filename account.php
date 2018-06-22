@@ -1,9 +1,6 @@
 <?php
-
-include ('includes/db_connect.inc.php');
-
-//while(['button'] == 'delete');
-
+  include ('includes/db_connect.inc.php');
+  //while(['button'] == 'delete');
 ?>
 
 

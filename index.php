@@ -3,7 +3,6 @@ include ('includes/db_connect.inc.php');
 //php(Info);
 $db = db_connect();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>

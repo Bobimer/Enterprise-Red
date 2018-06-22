@@ -1,7 +1,4 @@
 <?php
-
-   
-
     function signup($login, $mail, $password) {
         $db = db_connect();
         
