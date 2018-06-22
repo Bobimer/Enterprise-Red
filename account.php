@@ -94,17 +94,8 @@ include ('includes/db_connect.inc.php');
           <div class="col-md-4">
           <button type-"submit" id="button" name="delete" class="btn btn-danger" value="delete">Supprimer</button>
 
-          <?php
-            if (isset($_REQUEST['delete'])) 
-            {
-                  $db = db_connect();
-                  $req = $db->prepare("DELETE FROM `users` WHERE id_user = :id");
-                  $req->execute(array(
-                    "id" => $_SESSION['id_user']
-                    // $_POST['id_user']
-                  ));
-            }            
-          ?>
+          <?php include('includes/delete.inc.php'); ?>
+
           </div>
         </div>
         
