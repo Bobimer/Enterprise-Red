@@ -1,3 +1,15 @@
+<?php
+
+include ('includes/db_connect.inc.php');
+$db = db_connect();
+if (isset($_POST['']))
+
+($_POST['button'] == 'delete') {
+
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -88,7 +100,8 @@
         <div class="form-group">
           <label class="col-md-4 control-label" for="singlebutton">Supprimer le compte</label>
           <div class="col-md-4">
-            <button id="singlebutton" name="singlebutton" class="btn btn-danger">Supprimer</button>
+          <button type-"submit" id="button" name="singlebutton" class="btn btn-danger" value="value">Supprimer</button>
+
           </div>
         </div>
         
