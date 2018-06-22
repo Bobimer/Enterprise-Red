@@ -1,5 +1,6 @@
 <?php 
 session_start();
+
 include('lib/actions.php');
 
 $db = db_connect();

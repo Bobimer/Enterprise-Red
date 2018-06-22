@@ -1,10 +1,5 @@
 <?php
-  session_start();
-
-  var_dump($_SESSION);
-if(isset($_SESSION['id_user'])){
-    echo "le pseudo du visiteur est :" . $_SESSION['id_user'];
-}
+session_start();
 
 include('lib/actions.php');
 
