@@ -5,16 +5,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- The 3 meta tags below *must* come first in the head; any other head content must come *after* these tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-
-    <title>Évènement - Greenings</title>
-
+    <!--Title-->
+    <title>Compte supprimé - Greenings</title>
+    
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Poppins" rel="stylesheet">
 
@@ -37,26 +38,19 @@
   </head>
 
   <body>
+    <!-- Header -->
+    <?php include('includes/header.inc.php'); ?>
 
-    <div class="container">
-      <!-- Header -->
-      <?php include('includes/header.inc.php'); ?>
-
-    <div class="container" id="container">
-      <h2>Nom</h2>
-      <h4>Lieu</h4>      
-      <h5>14h00-19h00 Mardi 26 Avril</h5>
-      <p><h4>Description :</h4> ipsum dolor sit amet consectetur adipisicing elit. Temporibus quos quibusdam accusantium maiores dicta fuga error saepe, facilis reiciendis itaque, modi ipsam fugit alias eius odit laudantium dolor esse provident.</p>
-      
-      <h4>Détails et règles :</h4>
-      <ul>
-          <li>Prenez un costume</li>
-          <li>Chiens interdits</li>
-      </ul>
+    <div class="container content" id="container">
+      <!-- Success message -->
+      <p>Vous avez bien supprimé votre compte.</p>
+      <!-- Homepage link -->
+      <a href="index.php">Retour vers la page d'accueil</a>
     </div>
-    
+
     <!-- Footer -->
     <?php include('includes/footer.inc.php'); ?>
+
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>

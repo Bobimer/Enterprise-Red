@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include ('includes/db_connect.inc.php');
 //php(Info);
 $db = db_connect();
