@@ -34,6 +34,7 @@
   </head>
 
   <body>
+    <!-- Header -->
     <?php include('includes/header.inc.php'); ?>
 
     <div class="container content" id="container">
@@ -43,7 +44,7 @@
           <!-- Form Name -->
           <legend>Rechercher un évènement</legend>
 
-          <!-- Text input-->
+          <!-- Name search -->
           <div class="form-group">
             <label class="col-md-4 control-label" for="textinput">Recherche par nom</label>  
               <div class="col-md-5">
@@ -59,7 +60,7 @@
               </div>
           </div>
 
-          <!-- Text input-->
+          <!-- Location search -->
           <div class="form-group">
               <label class="col-md-4 control-label" for="textinput">Recherche par lieu</label>  
                 <div class="col-md-5">
@@ -75,7 +76,7 @@
                 </div>
             </div>
 
-            <!-- Text input-->
+            <!-- Date search -->
           <div class="form-group">
               <label class="col-md-4 control-label" for="textinput">Recherche par date</label>  
                 <div class="col-md-5">
@@ -91,7 +92,7 @@
                 </div>
             </div>
 
-            <!-- Text input-->
+            <!-- Theme search -->
           <div class="form-group">
               <label class="col-md-4 control-label" for="textinput">Recherche par thème</label>  
                 <div class="col-md-5">
@@ -117,6 +118,7 @@
       </form>
     </div>
 
+    <!-- Footer -->
     <?php include('includes/footer.inc.php'); ?>
 
 

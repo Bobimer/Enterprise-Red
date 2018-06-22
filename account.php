@@ -44,6 +44,7 @@ include ('includes/db_connect.inc.php');
   <body>
 
     <div class="container">
+      <!-- Header -->
       <?php include('includes/header.inc.php'); ?>
       
       <div class="container" id="container">
@@ -53,7 +54,7 @@ include ('includes/db_connect.inc.php');
         <!-- Form Name -->
         <legend>Votre profil</legend>
 
-        <!-- Login input-->
+        <!-- Login change -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="login">Changez votre pseudo</label>  
           <div class="col-md-4">
@@ -61,7 +62,7 @@ include ('includes/db_connect.inc.php');
           </div>
         </div>
         
-        <!-- Mail input-->
+        <!-- Mail change -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="mail">Changez votre adresse mail</label>  
           <div class="col-md-4">
@@ -69,7 +70,7 @@ include ('includes/db_connect.inc.php');
           </div>
         </div>
         
-        <!-- Password input-->
+        <!-- Password change -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="passwordinput">Changez votre mot de passe</label>
           <div class="col-md-4">
@@ -78,7 +79,7 @@ include ('includes/db_connect.inc.php');
           </div>
         </div>
         
-        <!-- Button -->
+        <!-- Save changes button -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="singlebutton">Valider les changements</label>
           <div class="col-md-4">
@@ -86,11 +87,12 @@ include ('includes/db_connect.inc.php');
           </div>
         </div>
         
-        <!-- Button -->
+        <!-- Delete account button -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="singlebutton">Supprimer le compte</label>
           <div class="col-md-4">
           <button type-"submit" id="button" name="delete" class="btn btn-danger" value="delete">Supprimer</button>
+          
           <?php
             if (isset($_REQUEST['delete'])) 
             {
@@ -109,7 +111,8 @@ include ('includes/db_connect.inc.php');
         </form>
         
         </div>
-    
+
+        <!-- Footer -->
         <?php include('includes/footer.inc.php'); ?>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

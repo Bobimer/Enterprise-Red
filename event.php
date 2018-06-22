@@ -35,6 +35,7 @@
   <body>
 
     <div class="container">
+      <!-- Header -->
       <?php include('includes/header.inc.php'); ?>
 
     <div class="container" id="container">
@@ -50,6 +51,7 @@
       </ul>
     </div>
     
+    <!-- Footer -->
     <?php include('includes/footer.inc.php'); ?>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

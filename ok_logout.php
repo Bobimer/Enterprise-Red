@@ -34,13 +34,17 @@
   </head>
 
   <body>
+    <!-- Header -->
     <?php include('includes/header.inc.php'); ?>
 
     <div class="container content" id="container">
-      <p>Félicitations vous êtes déconnecté !</p>
+      <!-- Success message -->
+      <p>Félicitations, vous êtes déconnecté !</p>
+      <!-- Homepage link -->
       <a href="index.php">Retour vers la page d'accueil</a>
     </div>
 
+    <!-- Footer -->
     <?php include('includes/footer.inc.php'); ?>
 
 

@@ -34,13 +34,20 @@
   </head>
 
   <body>
+    <!-- Header -->
     <?php include('includes/header.inc.php'); ?>
 
     <div class="container content" id="container">
+      <!-- Success message -->
       <p>Félicitations vous êtes inscrit !</p>
-      <a href="index.php">Retour vers la page d'accueil</a>
+      <!-- Login link -->
+      <a href="login.php">Connectez-vous</a>
+      <p>ou</p>
+      <!-- Homepage link -->
+      <a href="index.php">Retournez à la page d'accueil</a>
     </div>
 
+    <!-- Footer -->
     <?php include('includes/footer.inc.php'); ?>
 
 

@@ -39,12 +39,12 @@ include('lib/actions.php');
   </head>
 
   <body>
-    <!-- Header -->
+    <!-- Custom header -->
     <header>
           <div class="container">
               <div class="header clearfix">
                   <nav>
-                    <!-- Connexion/Inscription links -->
+                    <!-- Login link -->
                     <ul class="nav nav-pills pull-right loggedout">
                       <li role="signup"><a href="login.php" id="login">Vous avez déjà un compte ? Connectez-vous !</a></li>
                     </ul>
@@ -103,6 +103,7 @@ include('lib/actions.php');
       </form>
     </div>
 
+    <!-- Footer -->
     <?php include('includes/footer.inc.php'); ?>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
