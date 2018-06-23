@@ -54,7 +54,8 @@ include ('includes/db_connect.inc.php');
       <?php include('includes/header.inc.php'); ?>
       
       <div class="container" id="container">
-        <form class="form-horizontal">
+        <form method="post" class="form-horizontal">
+        <input type="hidden" name="action" value="modify">
         <fieldset>
         
         <!-- Form Name -->
@@ -72,7 +73,7 @@ include ('includes/db_connect.inc.php');
         <div class="form-group">
           <label class="col-md-4 control-label" for="mail">Changez votre adresse mail</label>  
           <div class="col-md-4">
-          <input id="mail" name="mail" type="text" placeholder="Nouvelle adresse" class="form-control input-md">
+          <input id="mail" name="mail" type="email" placeholder="Nouvelle adresse" class="form-control input-md">
           </div>
         </div>
         
@@ -80,7 +81,7 @@ include ('includes/db_connect.inc.php');
         <div class="form-group">
           <label class="col-md-4 control-label" for="passwordinput">Changez votre mot de passe</label>
           <div class="col-md-4">
-            <input id="passwordinput" name="passwordinput" type="password" placeholder="Nouveau mot de passe" class="form-control input-md">
+            <input id="pwd" name="pwd" type="password" placeholder="Nouveau mot de passe" class="form-control input-md">
             
           </div>
         </div>
@@ -89,9 +90,11 @@ include ('includes/db_connect.inc.php');
         <div class="form-group">
           <label class="col-md-4 control-label" for="singlebutton">Valider les changements</label>
           <div class="col-md-4">
-            <button id="singlebutton" name="singlebutton" class="btn btn-success">Valider</button>
+            <button type-"submit" id="button" name="modify" class="btn btn-success" value="modify">Valider</button>
           </div>
         </div>
+
+        <?php include('includes/modify.inc.php'); ?>
         
         <!-- Delete account button -->
         <div class="form-group">

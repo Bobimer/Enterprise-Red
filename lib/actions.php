@@ -26,6 +26,16 @@ switch(@$_POST["action"]) {
         $pwd = $_POST['pwd'];
         $errors = login($login, $pwd);
         break;
+
+
+    case "modify":
+        
+        $mail = $_POST['mail'];
+        $login = $_POST['login'];
+        $pwd = $_POST['pwd'];
+        
+        $errors = modify($login, $mail, $pwd);
+        break;
         
      case "create":
         
