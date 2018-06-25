@@ -1,6 +1,5 @@
 <?php
 
-var_dump($_SESSION);
     function create($date, $name, $place, $theme, $desc) 
     {
         $db = db_connect();
@@ -13,8 +12,7 @@ var_dump($_SESSION);
         }
         else
         {
-            var_dump($_SESSION);
-             echo "connecté";
+            echo "connecté";
             if (empty($_POST['date']) || empty($_POST['name']) || empty($_POST['place'])|| empty($_POST['theme']) || empty($_POST['desc']))
             {
                 $message = '<label>Tous les champs doivent être renseignés</label>';

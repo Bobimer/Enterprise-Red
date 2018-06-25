@@ -67,7 +67,7 @@ body {
 }
 
 /* Custom title */
-#title{
+#title {
   font-size: 45px;
   font-family: 'Kaushan Script', cursive;
   color: green;
@@ -92,9 +92,12 @@ hr.style1{
 }
 
 /* Community events style */
-#cevent {
+.cevent {
+  width: 260px;
+  height: 150px;
   background-color: #eeeeee;
   padding: 10px;
+  margin: 5px auto;
 }
 
 /* Responsive: Portrait tablets and up */
@@ -114,4 +117,10 @@ hr.style1{
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+.flex-container {
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
 }

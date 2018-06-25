@@ -54,45 +54,45 @@ $db = db_connect();
 
                 <div class="form-group">
                     <!-- Event name -->
-                    <label class="col-md-4 control-label" for="event_name">Nom de l'évènement</label>
+                    <label class="col-md-4 control-label" for="name">Nom de l'évènement</label>
                     <div class="col-md-4">
-                        <input id="event_name" name="name" type="text" placeholder="Nom de l'évènement" class="form-control input-md">
+                        <input id="name" name="name" type="text" placeholder="Nom de l'évènement" class="form-control input-md">
                         <span class="help-block">Donnez un nom à votre évènement</span>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <!-- Event location -->
-                    <label class="col-md-4 control-label" for="textarea">Lieu</label>
+                    <label class="col-md-4 control-label" for="place">Lieu</label>
                     <div class="col-md-4">
-                        <input id="textinput" name="place" type="text" placeholder="Adresse, lieu public, parcours..." class="form-control input-md">
+                        <input id="place" name="place" type="text" placeholder="Adresse, lieu public, parcours..." class="form-control input-md">
                         <span class="help-block">Renseignez le point de rendez-vous</span>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <!-- Event datetime -->
-                    <label class="col-md-4 control-label">Date et heure</label>
+                    <label class="col-md-4 control-label" for="date">Date et heure</label>
                     <div class="col-md-4">
-                        <input class="form-control" name="date" type="datetime-local" id="datetime">
+                        <input id="date" name="date" type="datetime-local" class="form-control">
                         <span class="help-block">Indiquez une date et une heure de rendez-vous</span>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <!-- Event description -->
-                    <label class="col-md-4 control-label" for="textarea">Description</label>
+                    <label class="col-md-4 control-label" for="description">Description</label>
                     <div class="col-md-4">
-                        <textarea class="form-control" id="textarea" name="desc" placeholder="Description"></textarea>
+                        <textarea id="description" name="desc" placeholder="Description" class="form-control"></textarea>
                         <span class="help-block">Décrivez l'évènement</span>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <!-- Event theme -->
-                    <label class="col-md-4 control-label" for="selectbasic">Thème</label>
+                    <label class="col-md-4 control-label" for="theme">Thème</label>
                     <div class="col-md-4">
-                        <select id="selectbasic" name="theme" class="form-control">
+                        <select id="theme" name="theme" class="form-control">
                             <option value="1">Ramassage simple</option>
                             <option value="2">Balade</option>
                             <option value="3">Ludique</option>
@@ -107,7 +107,7 @@ $db = db_connect();
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="singlebutton"></label>
                     <div class="col-md-4">
-                    <button id="singlebutton" name="singlebutton" class="btn btn-success">Valider</button>
+                    <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-success">Valider</button>
                     </div>
                 </div>
 

@@ -1,7 +1,6 @@
 <?php
 
-if (isset($_POST['modify'])) 
-{
+if (isset($_POST['modify'])) {
         $db = db_connect();
 
         
@@ -12,5 +11,5 @@ if (isset($_POST['modify']))
         ));
         header("Location: ok_modify.php");
         exit;
-        }
+}
     

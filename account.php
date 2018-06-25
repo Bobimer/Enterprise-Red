@@ -1,15 +1,9 @@
 <?php
-<<<<<<< HEAD
-  include ('includes/db_connect.inc.php');
-  //while(['button'] == 'delete');
-=======
 session_start();
 
 include ('includes/db_connect.inc.php');
 
 //while(['button'] == 'delete');
-
->>>>>>> 7ffcba56decccac7b3a4ba617a75eef77401aace
 ?>
 
 
@@ -98,7 +92,7 @@ include ('includes/db_connect.inc.php');
         
         <!-- Delete account button -->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="singlebutton">Supprimer le compte</label>
+          <label class="col-md-4 control-label" for="button">Supprimer le compte</label>
           <div class="col-md-4">
           <button type-"submit" id="button" name="delete" class="btn btn-danger" value="delete">Supprimer</button>
 

@@ -1,5 +1,12 @@
 <?php
   session_start();
+  include('includes/db_connect.inc.php');
+  $db = db_connect();
+
+  $name = $_GET['name'];
+  $place = $_GET['place'];
+  $date = $_GET['date'];
+  $theme = $_GET['theme'];
 ?>
 
 <!DOCTYPE html>
@@ -42,84 +49,94 @@
     <?php include('includes/header.inc.php'); ?>
 
     <div class="container content" id="container">
-      <form class="form-horizontal">
+      <form method="get" action="search.php" class="form-horizontal">
+      
         <fieldset>
           
           <!-- Form Name -->
           <legend>Rechercher un évènement</legend>
 
-          <!-- Name search -->
           <div class="form-group">
-            <label class="col-md-4 control-label" for="textinput">Recherche par nom</label>  
-              <div class="col-md-5">
-                <input id="textinput" name="textinput" type="text" placeholder="Nom de l'évènement" class="form-control input-md">
-              </div>
-          </div>
+                    <!-- Event name -->
+                    <label class="col-md-4 control-label" for="name">Nom de l'évènement</label>
+                    <div class="col-md-4">
+                        <input id="name" name="name" type="text" placeholder="Nom de l'évènement" 
+                        class="form-control input-md" value="<?php echo $name ?>">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <!-- Event location -->
+                    <label class="col-md-4 control-label" for="place">Lieu</label>
+                    <div class="col-md-4">
+                        <input id="place" name="place" type="text" placeholder="Adresse, lieu public, parcours..." 
+                        class="form-control input-md" value="<?php echo $place ?>">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <!-- Event datetime -->
+                    <label class="col-md-4 control-label" for="date">Date</label>
+                    <div class="col-md-4">
+                        <input id="date" name="date" type="date" 
+                        class="form-control" value="<?php echo $date ?>">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <!-- Event theme -->
+                    <label class="col-md-4 control-label" for="theme">Thème</label>
+                    <div class="col-md-4">
+                        <select id="theme" name="theme" class="form-control" value="">
+                            <option value=""></option>
+                            <option <?php if($theme == "Ramassage simple") echo "selected" ?> value="Ramassage simple">
+                            Ramassage simple</option>
+                            <option <?php if($theme == "Balade") echo "selected" ?> value="Balade">Balade</option>
+                            <option <?php if($theme == "Ludique") echo "selected" ?> value="Ludique">Ludique</option>
+                            <option <?php if($theme == "Sport") echo "selected" ?> value="Sport">Sport</option>
+                            <option <?php if($theme == "Autres") echo "selected" ?> value="Autres">Autres</option>
+                        </select>
+                    </div>
+                </div>
           
-          <!-- Button -->
+          <!-- Search button -->
           <div class="form-group">
             <label class="col-md-4 control-label" for="singlebutton"></label>
-              <div class="col-md-4">
-                <button id="singlebutton" name="singlebutton" class="btn btn-success">Recherche</button>
-              </div>
+            <div class="col-md-4">
+              <button type="submit" id="singlebutton" class="btn btn-success">Recherche</button>
+            </div>
           </div>
-
-          <!-- Location search -->
-          <div class="form-group">
-              <label class="col-md-4 control-label" for="textinput">Recherche par lieu</label>  
-                <div class="col-md-5">
-                  <input id="textinput" name="textinput" type="text" placeholder="Lieu de l'évènement" class="form-control input-md">
-                </div>
-            </div>
-            
-            <!-- Button -->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="singlebutton"></label>
-                <div class="col-md-4">
-                  <button id="singlebutton" name="singlebutton" class="btn btn-success">Recherche</button>
-                </div>
-            </div>
-
-            <!-- Date search -->
-          <div class="form-group">
-              <label class="col-md-4 control-label" for="textinput">Recherche par date</label>  
-                <div class="col-md-5">
-                  <input id="textinput" name="textinput" type="text" placeholder="Date de l'évènement" class="form-control input-md">
-                </div>
-            </div>
-            
-            <!-- Button -->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="singlebutton"></label>
-                <div class="col-md-4">
-                  <button id="singlebutton" name="singlebutton" class="btn btn-success">Recherche</button>
-                </div>
-            </div>
-
-            <!-- Theme search -->
-          <div class="form-group">
-              <label class="col-md-4 control-label" for="textinput">Recherche par thème</label>  
-                <div class="col-md-5">
-                  <select id="selectbasic" name="selectbasic" class="form-control">
-                      <option value="1">Ramassage simple</option>
-                      <option value="2">Ballade</option>
-                      <option value="3">Ludique</option>
-                      <option value="4">Sport</option>
-                      <option value="5">Autres</option>
-                  </select>                
-                </div>
-            </div>
-            
-            <!-- Button -->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="singlebutton"></label>
-                <div class="col-md-4">
-                  <button id="singlebutton" name="singlebutton" class="btn btn-success">Recherche</button>
-                </div>
-            </div>
           
         </fieldset>
       </form>
+
+      <?php 
+        $req = $db->prepare("SELECT * FROM events WHERE (event_name LIKE :name) AND (event_place LIKE :place) AND (event_date LIKE :date) AND (event_theme LIKE :theme)");
+        $req->execute(array(
+            "name" => '%'.$name.'%',
+            "place" => '%'.$place.'%',
+            "date" => '%'.$date.'%',
+            "theme" => '%'.$theme.'%'
+        ));
+
+        while($result = $req->fetch()) {
+          echo
+          "<div class='col-lg-4'>
+            <div class='col-lg-12 cevent'>
+              <!-- Title -->
+              <h4><p>".$result['event_name']."</p></h4>
+              <!-- Localisation -->
+              <p>".$result['event_place']."</p>
+              <p>
+                <!-- Access button -->
+                <a class='btn btn-success' href='event.php?id=".$result['id_event']."' role='button'>Voir cet évènement &raquo;</a>
+              </p>
+            </div>
+          </div>";
+        }    
+      ?>
+      
+      </div>
     </div>
 
     <!-- Footer -->

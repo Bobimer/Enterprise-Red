@@ -1,5 +1,7 @@
 <?php
-  session_start();
+session_start();
+    include('includes/db_connect.inc.php');
+    $db = db_connect();
 ?>
 
 <!DOCTYPE html>
@@ -37,23 +39,28 @@
   </head>
 
   <body>
-
     <div class="container">
       <!-- Header -->
       <?php include('includes/header.inc.php'); ?>
 
-    <div class="container" id="container">
-      <h2>Nom</h2>
-      <h4>Lieu</h4>      
-      <h5>14h00-19h00 Mardi 26 Avril</h5>
-      <p><h4>Description :</h4> ipsum dolor sit amet consectetur adipisicing elit. Temporibus quos quibusdam accusantium maiores dicta fuga error saepe, facilis reiciendis itaque, modi ipsam fugit alias eius odit laudantium dolor esse provident.</p>
-      
-      <h4>Détails et règles :</h4>
-      <ul>
-          <li>Prenez un costume</li>
-          <li>Chiens interdits</li>
-      </ul>
-    </div>
+    <?php 
+      $id = $_GET['id'];
+
+      $req = $db->prepare("SELECT * FROM events WHERE id_event = :id");
+      $req->execute(array(
+        "id" => $id
+      ));
+      $result = $req->fetch();
+
+      echo 
+      "<div class='container' id='container'>
+        <h2>Nom </h2>".$result['event_name']."
+        <h4>Lieu </h4>".$result['event_place']."
+        <h5>Date </h5>".$result['event_date']."
+        <h4>Description :</h4>".$result['event_desc']."
+        <h4>Theme :</h4>".$result['event_theme']."
+      </div>";
+    ?>
     
     <!-- Footer -->
     <?php include('includes/footer.inc.php'); ?>
