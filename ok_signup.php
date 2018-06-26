@@ -37,7 +37,7 @@ session_start();
 
     <div class="container content" id="container">
       <!-- Success message -->
-      <p>Félicitations vous êtes inscrit !</p>
+      <p>Félicitations, vous êtes inscrit !</p>
       <!-- Login link -->
       <a href="login.php">Connectez-vous</a>
       <p>ou</p>

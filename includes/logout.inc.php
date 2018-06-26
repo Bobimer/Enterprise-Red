@@ -1,6 +1,10 @@
 <?php
+// Starts the session
+session_start();
 
-    session_start();
-    session_destroy();
-    header('Location: ../ok_logout.php');
-    exit;
+// Destroys the session to log out
+session_destroy();
+
+// Heads to ok_logout.php
+header('Location: ../ok_logout.php');
+exit;

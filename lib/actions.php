@@ -7,7 +7,6 @@ include ('includes/db_connect.inc.php');
 include ('includes/signup.inc.php');
 include ('includes/login.inc.php');
 include ('includes/create.inc.php');
-include ('includes/search.inc.php');
 
 switch(@$_POST["action"]) {
     default: break;
@@ -47,5 +46,4 @@ switch(@$_POST["action"]) {
         
         $errors = create($date, $name, $place, $theme, $desc);
         break;
-
 }
