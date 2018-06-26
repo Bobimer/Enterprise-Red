@@ -1,8 +1,11 @@
 <?php
+// For the session to be active
 session_start();
 
+// Actions include
 include('lib/actions.php');
 
+// Database connection
 $db = db_connect();
 ?>
 
@@ -17,6 +20,7 @@ $db = db_connect();
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
+    <!-- Title -->
     <title>Créer un évènement - Greenings</title>
 
     <!-- Font -->
@@ -30,14 +34,6 @@ $db = db_connect();
 
     <!-- Custom styles for this template -->
     <link href="css/index.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
   </head>
 
   <body>
@@ -45,6 +41,7 @@ $db = db_connect();
     <?php include('includes/header.inc.php'); ?>
 
     <div class="container content" id="container">
+        <!-- Method post to send data -->
         <form method="post" class="form-horizontal">
             <input type="hidden" name="action" value="create">
             <fieldset>
@@ -56,7 +53,8 @@ $db = db_connect();
                     <!-- Event name -->
                     <label class="col-md-4 control-label" for="name">Nom de l'évènement</label>
                     <div class="col-md-4">
-                        <input id="name" name="name" type="text" placeholder="Nom de l'évènement" class="form-control input-md">
+                        <!-- Required because database doesn't register blank values -->
+                        <input id="name" required name="name" type="text" placeholder="Nom de l'évènement" class="form-control input-md">
                         <span class="help-block">Donnez un nom à votre évènement</span>
                     </div>
                 </div>
@@ -65,7 +63,8 @@ $db = db_connect();
                     <!-- Event location -->
                     <label class="col-md-4 control-label" for="place">Lieu</label>
                     <div class="col-md-4">
-                        <input id="place" name="place" type="text" placeholder="Adresse, lieu public, parcours..." class="form-control input-md">
+                        <!-- Required because database doesn't register blank values -->
+                        <input id="place" required name="place" type="text" placeholder="Adresse, lieu public, parcours..." class="form-control input-md">
                         <span class="help-block">Renseignez le point de rendez-vous</span>
                     </div>
                 </div>
@@ -74,7 +73,8 @@ $db = db_connect();
                     <!-- Event datetime -->
                     <label class="col-md-4 control-label" for="date">Date et heure</label>
                     <div class="col-md-4">
-                        <input id="date" name="date" type="datetime-local" class="form-control">
+                        <!-- Required because database doesn't register blank values -->
+                        <input id="date" required name="date" type="datetime-local" class="form-control">
                         <span class="help-block">Indiquez une date et une heure de rendez-vous</span>
                     </div>
                 </div>
@@ -83,7 +83,8 @@ $db = db_connect();
                     <!-- Event description -->
                     <label class="col-md-4 control-label" for="description">Description</label>
                     <div class="col-md-4">
-                        <textarea id="description" name="desc" placeholder="Description" class="form-control"></textarea>
+                        <!-- Required because database doesn't register blank values -->
+                        <textarea id="description" required name="desc" placeholder="Description" class="form-control"></textarea>
                         <span class="help-block">Décrivez l'évènement</span>
                     </div>
                 </div>
@@ -110,7 +111,7 @@ $db = db_connect();
                     <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-success">Valider</button>
                     </div>
                 </div>
-
+                
             </fieldset>
         </form>
     </div>

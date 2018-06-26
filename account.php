@@ -1,9 +1,9 @@
 <?php
+// For the session to be active
 session_start();
 
+// Database Connection include
 include ('includes/db_connect.inc.php');
-
-//while(['button'] == 'delete');
 ?>
 
 
@@ -18,6 +18,7 @@ include ('includes/db_connect.inc.php');
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
+    <!-- Title -->
     <title>Compte - Greenings</title>
 
     <!-- Font -->
@@ -31,23 +32,16 @@ include ('includes/db_connect.inc.php');
 
     <!-- Custom styles for this template -->
     <link href="css/index.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
   </head>
 
   <body>
 
     <div class="container">
-      <!-- Header -->
+      <!-- Header include -->
       <?php include('includes/header.inc.php'); ?>
       
       <div class="container" id="container">
+        <!-- Method post to send data -->
         <form method="post" class="form-horizontal">
         <input type="hidden" name="action" value="modify">
         <fieldset>
@@ -55,7 +49,7 @@ include ('includes/db_connect.inc.php');
         <!-- Form Name -->
         <legend>Votre profil</legend>
 
-        <!-- Login change -->
+            <!-- Login change (availability not implemented yet) -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="login">Changez votre pseudo</label>  
           <div class="col-md-4">
@@ -63,7 +57,8 @@ include ('includes/db_connect.inc.php');
           </div>
         </div>
         
-        <!-- Mail change -->
+            <!-- Mail and password changes, not functional
+            Mail change
         <div class="form-group">
           <label class="col-md-4 control-label" for="mail">Changez votre adresse mail</label>  
           <div class="col-md-4">
@@ -71,7 +66,7 @@ include ('includes/db_connect.inc.php');
           </div>
         </div>
         
-        <!-- Password change -->
+            Password change
         <div class="form-group">
           <label class="col-md-4 control-label" for="passwordinput">Changez votre mot de passe</label>
           <div class="col-md-4">
@@ -79,6 +74,7 @@ include ('includes/db_connect.inc.php');
             
           </div>
         </div>
+            -->
         
         <!-- Save changes button -->
         <div class="form-group">
@@ -88,6 +84,7 @@ include ('includes/db_connect.inc.php');
           </div>
         </div>
 
+            <!-- Modify include -->
         <?php include('includes/modify.inc.php'); ?>
         
         <!-- Delete account button -->
@@ -96,6 +93,7 @@ include ('includes/db_connect.inc.php');
           <div class="col-md-4">
           <button type-"submit" id="button" name="delete" class="btn btn-danger" value="delete">Supprimer</button>
 
+              <!-- Delete include -->
           <?php include('includes/delete.inc.php'); ?>
 
           </div>
@@ -106,7 +104,7 @@ include ('includes/db_connect.inc.php');
         
         </div>
 
-        <!-- Footer -->
+        <!-- Footer include -->
         <?php include('includes/footer.inc.php'); ?>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

@@ -1,5 +1,6 @@
 <?php
-  session_start();
+// For the session to be active
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +14,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
+
     <!--Title-->
     <title>Modifications réussies - Greenings</title>
     
@@ -27,18 +29,10 @@
 
     <!-- Custom styles for this template -->
     <link href="css/index.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
   </head>
 
   <body>
-    <!-- Header -->
+    <!-- Header include -->
     <?php include('includes/header.inc.php'); ?>
 
     <div class="container content" id="container">
@@ -48,7 +42,7 @@
       <a href="index.php">Retournez à la page d'accueil</a>
     </div>
 
-    <!-- Footer -->
+    <!-- Footer include -->
     <?php include('includes/footer.inc.php'); ?>
 
 

@@ -1,8 +1,11 @@
 <?php 
+// For the session to be active
 session_start();
 
+// Actions include
 include('lib/actions.php');
 
+// Database connection
 $db = db_connect();
 ?>
 
@@ -17,6 +20,7 @@ $db = db_connect();
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
+
     <!--Title-->
     <title>Connexion - Greenings</title>
     
@@ -31,14 +35,6 @@ $db = db_connect();
 
     <!-- Custom styles for this template -->
     <link href="css/index.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
   </head>
 
   <body>
@@ -67,7 +63,6 @@ $db = db_connect();
           <!-- Form Name -->
           <legend>Connexion</legend>
           
-
           <!-- Text input-->
           <div class="form-group">
             <!-- Login -->
@@ -81,9 +76,9 @@ $db = db_connect();
           <div class="form-group">
             <!-- Password -->
             <label class="col-md-4 control-label" for="pwd">Mot de passe</label>  
-              <div class="col-md-4">
-                <input id="pwd" name="pwd" type="password" class="form-control input-md">
-              </div>
+            <div class="col-md-4">
+              <input id="pwd" name="pwd" type="password" class="form-control input-md">
+            </div>
           </div>
 
           <!-- Button -->
@@ -98,7 +93,7 @@ $db = db_connect();
       </form>
     </div>
 
-    <!-- Footer -->
+    <!-- Footer include -->
     <?php include('includes/footer.inc.php'); ?>
 
 

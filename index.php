@@ -1,8 +1,11 @@
-<?php 
+<?php
+// For the session to be active 
 session_start();
 
+// Database connection include
 include ('includes/db_connect.inc.php');
 
+// Database connection
 $db = db_connect();
 ?>
 
@@ -17,6 +20,7 @@ $db = db_connect();
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
+    <!-- Title -->
     <title>Accueil - Greenings</title>
 
     <!-- Font -->
@@ -30,16 +34,10 @@ $db = db_connect();
 
     <!-- Custom styles for this template -->
     <link href="css/index.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>
-    <!-- Header -->
+    <!-- Header include -->
     <?php include('includes/header.inc.php'); ?>
 
     <div class="container content" id="container">
@@ -49,13 +47,13 @@ $db = db_connect();
         <h1>Bienvenue sur Greenings !</h1>
         <p class="lead">Rejoignez le mouvement et participez à des évènements ou proposez les vôtres afin de rendre nos rues plus propres ensemble !</p>
         <p></p>
-        <!-- Event search and creation buttons -->
+        <!-- Event creation and search buttons -->
         <a class="btn btn-lg btn-success" href="create.php" role="button">Créer un évènement &raquo;</a>
         <a class="btn btn-lg btn-success" href="search.php" role="button">Rechercher un évènement &raquo;</a>
       </div>
     </div>
 
-    <!-- Footer -->
+    <!-- Footer include -->
     <?php include('includes/footer.inc.php'); ?>
 
 

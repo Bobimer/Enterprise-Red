@@ -1,12 +1,18 @@
 <?php
-  session_start();
-  include('includes/db_connect.inc.php');
-  $db = db_connect();
+// For the session to be active
+session_start();
 
-  $name = $_GET['name'];
-  $place = $_GET['place'];
-  $date = $_GET['date'];
-  $theme = $_GET['theme'];
+// Dabatase connection include
+include('includes/db_connect.inc.php');
+
+// Database connection
+$db = db_connect();
+
+// Get input values
+$name = $_GET['name'];
+$place = $_GET['place'];
+$date = $_GET['date'];
+$theme = $_GET['theme'];
 ?>
 
 <!DOCTYPE html>
@@ -20,6 +26,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
+
     <!--Title-->
     <title>Rechercher un évènement - Greenings</title>
     
@@ -34,70 +41,62 @@
 
     <!-- Custom styles for this template -->
     <link href="css/index.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
   </head>
 
   <body>
-    <!-- Header -->
+    <!-- Header include -->
     <?php include('includes/header.inc.php'); ?>
 
     <div class="container content" id="container">
+      <!-- Method get to request data -->
       <form method="get" action="search.php" class="form-horizontal">
-      
         <fieldset>
-          
           <!-- Form Name -->
           <legend>Rechercher un évènement</legend>
 
           <div class="form-group">
-                    <!-- Event name -->
-                    <label class="col-md-4 control-label" for="name">Nom de l'évènement</label>
-                    <div class="col-md-4">
-                        <input id="name" name="name" type="text" placeholder="Nom de l'évènement" 
-                        class="form-control input-md" value="<?php echo $name ?>">
-                    </div>
-                </div>
+            <!-- Event name -->
+            <label class="col-md-4 control-label" for="name">Nom de l'évènement</label>
+            <div class="col-md-4">
+              <!-- Echoing fetched name -->
+              <input id="name" name="name" type="text" placeholder="Nom de l'évènement" class="form-control input-md" value="<?php echo $name ?>">
+            </div>
+          </div>
 
-                <div class="form-group">
-                    <!-- Event location -->
-                    <label class="col-md-4 control-label" for="place">Lieu</label>
-                    <div class="col-md-4">
-                        <input id="place" name="place" type="text" placeholder="Adresse, lieu public, parcours..." 
-                        class="form-control input-md" value="<?php echo $place ?>">
-                    </div>
-                </div>
+          <div class="form-group">
+            <!-- Event location -->
+            <label class="col-md-4 control-label" for="place">Lieu</label>
+            <div class="col-md-4">
+              <!-- Echoing fetched place -->
+              <input id="place" name="place" type="text" placeholder="Adresse, lieu public, parcours..." class="form-control input-md" value="<?php echo $place ?>">
+            </div>
+          </div>
 
-                <div class="form-group">
-                    <!-- Event datetime -->
-                    <label class="col-md-4 control-label" for="date">Date</label>
-                    <div class="col-md-4">
-                        <input id="date" name="date" type="date" 
-                        class="form-control" value="<?php echo $date ?>">
-                    </div>
-                </div>
+          <div class="form-group">
+            <!-- Event datetime -->
+            <label class="col-md-4 control-label" for="date">Date</label>
+            <div class="col-md-4">
+              <!-- Echoing fetched date -->
+              <input id="date" name="date" type="date" class="form-control" value="<?php echo $date ?>">
+            </div>
+          </div>
 
-                <div class="form-group">
-                    <!-- Event theme -->
-                    <label class="col-md-4 control-label" for="theme">Thème</label>
-                    <div class="col-md-4">
-                        <select id="theme" name="theme" class="form-control" value="">
-                            <option value=""></option>
-                            <option <?php if($theme == "Ramassage simple") echo "selected" ?> value="Ramassage simple">
-                            Ramassage simple</option>
-                            <option <?php if($theme == "Balade") echo "selected" ?> value="Balade">Balade</option>
-                            <option <?php if($theme == "Ludique") echo "selected" ?> value="Ludique">Ludique</option>
-                            <option <?php if($theme == "Sport") echo "selected" ?> value="Sport">Sport</option>
-                            <option <?php if($theme == "Autres") echo "selected" ?> value="Autres">Autres</option>
-                        </select>
-                    </div>
-                </div>
+          <div class="form-group">
+            <!-- Event theme -->
+            <label class="col-md-4 control-label" for="theme">Thème</label>
+            <div class="col-md-4">
+              <select id="theme" name="theme" class="form-control" value="">
+                <!-- Selecting values and then echoing fetched values -->
+                <option value=""></option>
+                <option <?php if($theme == "Ramassage simple") echo "selected" ?> value="Ramassage simple">
+                Ramassage simple</option>
+                <option <?php if($theme == "Balade") echo "selected" ?> value="Balade">Balade</option>
+                <option <?php if($theme == "Ludique") echo "selected" ?> value="Ludique">Ludique</option>
+                <option <?php if($theme == "Sport") echo "selected" ?> value="Sport">Sport</option>
+                <option <?php if($theme == "Autres") echo "selected" ?> value="Autres">Autres</option>
+              </select>
+            </div>
+          </div>
           
           <!-- Search button -->
           <div class="form-group">
@@ -110,6 +109,7 @@
         </fieldset>
       </form>
 
+      <!-- Fetch from database with input values -->
       <?php 
         $req = $db->prepare("SELECT * FROM events WHERE (event_name LIKE :name) AND (event_place LIKE :place) AND (event_date LIKE :date) AND (event_theme LIKE :theme)");
         $req->execute(array(
@@ -120,28 +120,24 @@
         ));
 
         while($result = $req->fetch()) {
-          echo
-          "<div class='col-lg-4'>
-            <div class='col-lg-12 cevent'>
-              <!-- Title -->
-              <h4><p>".$result['event_name']."</p></h4>
-              <!-- Localisation -->
-              <p>".$result['event_place']."</p>
-              <p>
-                <!-- Access button -->
-                <a class='btn btn-success' href='event.php?id=".$result['id_event']."' role='button'>Voir cet évènement &raquo;</a>
-              </p>
+        ?>
+          <div class='col-lg-4'>
+            <div class='col-lg-12 sevent'>
+              <!-- Display fetched name -->
+              <p id="eventname"><?= $result['event_name'] ?></p>
+              <!-- Display fetched place -->
+              <p><?= $result['event_place']?></p>
+              <!-- Access fetched event -->
+              <p><a class='btn btn-success' href='event.php?id=<?=$result['id_event']?>' role='button'>Voir cet évènement &raquo;</a></p>
             </div>
-          </div>";
-        }    
-      ?>
+          </div>
+        <?php } ?>
       
       </div>
     </div>
 
-    <!-- Footer -->
+    <!-- Footer include -->
     <?php include('includes/footer.inc.php'); ?>
-
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>

@@ -5,6 +5,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+/* Keeps the footer at the bottom of the page */
 #container{
   min-height: 75vh;
 }
@@ -74,30 +75,56 @@ body {
   text-decoration: none;
 }
 
-legend {
-  color: #8FBC8F;
-}
-
 /* Connexion and Inscription color */
 #login,
 #signup,
 #account,
-#disconnect{
+#disconnect {
   color: #3CB371;
 }
 
-/* Lines style */
-hr.style1{
-	border-top: 1px solid #8c8b8b;
+/* Legends and event names color */
+legend,
+#eventname {
+  color: #8FBC8F;
 }
 
-/* Community events style */
-.cevent {
+/* Event names style */
+#eventname {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Search events style */
+.sevent {
   width: 260px;
   height: 150px;
   background-color: #eeeeee;
   padding: 10px;
   margin: 5px auto;
+}
+
+/* Flex containers */
+.flex-container {
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Event detail padding en*/
+#eventdetail {
+  padding: 10px;
+}
+
+/* Event title style and position to match other pages */
+#detailtitle {
+  font-weight: bold;
+  text-align: right;
+}
+
+/* Event description color to match other pages */
+#detaildesc{
+  color: #737373;
 }
 
 /* Responsive: Portrait tablets and up */
@@ -117,10 +144,4 @@ hr.style1{
   .jumbotron {
     border-bottom: 0;
   }
-}
-
-.flex-container {
-  display: flex;
-  align-content: flex-start;
-  flex-wrap: wrap;
 }
