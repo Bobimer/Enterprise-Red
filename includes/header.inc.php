@@ -12,7 +12,6 @@
             <li role="disconnect"><a href="includes/logout.inc.php" id="disconnect">Déconnexion</a></li>
           </ul>
         <?php }
-        
         // Shows "Connexion" and "Inscription" is the user is disconnected
         else {
         ?>

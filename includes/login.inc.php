@@ -17,7 +17,6 @@ function login($login, $pwd) {
         $_SESSION['login'] = $pseudo;
         header("Location: ok_login.php");
     }
-
     else {
     echo 'Mauvais identifiant ou mot de passe !';
     }

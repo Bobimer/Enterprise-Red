@@ -55,31 +55,31 @@ $db = db_connect();
           <div class='container content' id='container'>
             <!-- Event name fetch -->
             <legend><?=$result['event_name']?></legend>
-            <div class='col-md-12' id='eventdetail'>
-              <div class='col-md-4' id='detailtitle'>Lieu</div>
+            <div class='col-md-12 eventdetail'>
+              <div class='col-md-4 detailtitle'>Lieu</div>
               <!-- Place fetch -->
-              <div class='col-md-5' id='detaildesc'> <?=$result['event_place']?></div>
+              <div class='col-md-5 detaildesc'> <?=$result['event_place']?></div>
             </div>
 
             <br>
 
-            <div class='col-md-12' id='eventdetail'>
-              <div class='col-md-4' id='detailtitle'>Date</div>
+            <div class='col-md-12 eventdetail'>
+              <div class='col-md-4 detailtitle'>Date</div>
               <!-- Date fetch -->
-              <div class='col-md-5' id='detaildesc'><?=$result['event_date']?></div>
+              <div class='col-md-5 detaildesc'><?=$result['event_date']?></div>
             </div>
-            <div class='col-md-12' id='eventdetail'>
-              <div class='col-md-4' id='detailtitle'>Description</div>
+            <div class='col-md-12 eventdetail'>
+              <div class='col-md-4 detailtitle'>Description</div>
               <!-- Description fetch -->
-              <div class='col-md-5' id='detaildesc'><?=$result['event_desc']?></div>
+              <div class='col-md-5 detaildesc'><?=$result['event_desc']?></div>
             </div>
 
             <br>
 
-            <div class='col-md-12' id='eventdetail'>
-              <div class='col-md-4' id='detailtitle'>Thème</div>
+            <div class='col-md-12 eventdetail'>
+              <div class='col-md-4 detailtitle'>Thème</div>
               <!-- Theme fetch -->
-            <div class='col-md-5' id='detaildesc'><?=$result['event_theme']?></div>
+            <div class='col-md-5 detaildesc'><?=$result['event_theme']?></div>
           </div>
     </div>
     

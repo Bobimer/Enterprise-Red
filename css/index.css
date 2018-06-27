@@ -112,18 +112,18 @@ legend,
 }
 
 /* Event detail padding en*/
-#eventdetail {
+.eventdetail {
   padding: 10px;
 }
 
 /* Event title style and position to match other pages */
-#detailtitle {
+.detailtitle {
   font-weight: bold;
   text-align: right;
 }
 
 /* Event description color to match other pages */
-#detaildesc{
+.detaildesc{
   color: #737373;
 }
 

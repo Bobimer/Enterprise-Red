@@ -49,7 +49,7 @@ include ('includes/db_connect.inc.php');
         <!-- Form Name -->
         <legend>Votre profil</legend>
 
-            <!-- Login change (availability not implemented yet) -->
+        <!-- Login change (availability check not implemented yet) -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="login">Changez votre pseudo</label>  
           <div class="col-md-4">
@@ -57,8 +57,8 @@ include ('includes/db_connect.inc.php');
           </div>
         </div>
         
-            <!-- Mail and password changes, not functional
-            Mail change
+        <!-- Mail and password changes, not functional
+        Mail change
         <div class="form-group">
           <label class="col-md-4 control-label" for="mail">Changez votre adresse mail</label>  
           <div class="col-md-4">
@@ -66,25 +66,24 @@ include ('includes/db_connect.inc.php');
           </div>
         </div>
         
-            Password change
+        Password change
         <div class="form-group">
           <label class="col-md-4 control-label" for="passwordinput">Changez votre mot de passe</label>
           <div class="col-md-4">
             <input id="pwd" name="pwd" type="password" placeholder="Nouveau mot de passe" class="form-control input-md">
-            
           </div>
         </div>
-            -->
+        -->
         
         <!-- Save changes button -->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="singlebutton">Valider les changements</label>
+          <label class="col-md-4 control-label" for="button">Valider les changements</label>
           <div class="col-md-4">
             <button type-"submit" id="button" name="modify" class="btn btn-success" value="modify">Valider</button>
           </div>
         </div>
 
-            <!-- Modify include -->
+        <!-- Modify include -->
         <?php include('includes/modify.inc.php'); ?>
         
         <!-- Delete account button -->
@@ -93,7 +92,7 @@ include ('includes/db_connect.inc.php');
           <div class="col-md-4">
           <button type-"submit" id="button" name="delete" class="btn btn-danger" value="delete">Supprimer</button>
 
-              <!-- Delete include -->
+          <!-- Delete include -->
           <?php include('includes/delete.inc.php'); ?>
 
           </div>

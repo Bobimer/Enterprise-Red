@@ -9,7 +9,6 @@ function create($date, $name, $place, $theme, $desc) {
         header("Location: login.php");
         exit;   
     }
-
     else {
         // Adds input values to the database
         $req = $db->prepare("INSERT INTO events (id_user, event_date, event_name,  event_place, event_theme, event_desc) VALUES(:id, :date, :name, :place, :theme, :desc)");

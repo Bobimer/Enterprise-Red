@@ -64,37 +64,37 @@ include('lib/actions.php');
           <!-- Text input-->
           <div class="form-group">
             <!-- Login -->
-            <label class="col-md-4 control-label" for="textinput">Choisissez un pseudo</label>  
+            <label class="col-md-4 control-label" for="login">Choisissez un pseudo</label>  
             <div class="col-md-4">
               <!-- Login input required otherwise database doesn't store data -->
-              <input id="textinput" required name="login" type="text" class="form-control input-md">
+              <input id="login" required name="login" type="text" class="form-control input-md">
             </div>
           </div>
 
           <!-- Text input-->
           <div class="form-group">
             <!-- Mail -->
-            <label class="col-md-4 control-label" for="textinput">Saisissez votre adresse mail</label>  
+            <label class="col-md-4 control-label" for="mail">Saisissez votre adresse mail</label>  
             <div class="col-md-4">
               <!-- Mail input required otherwise database doesn't store data -->
-              <input id="textinput" required name="mail" type="email" class="form-control input-md">
+              <input id="mail" required name="mail" type="email" class="form-control input-md">
             </div>
           </div>
             
           <!-- Text input-->
           <div class="form-group">
             <!-- Password -->
-            <label class="col-md-4 control-label" for="textinput">Choisissez un mot de passe</label>  
+            <label class="col-md-4 control-label" for="password">Choisissez un mot de passe</label>  
               <div class="col-md-4">
-                <input id="textinput" name="pwd" type="password" class="form-control input-md">
+                <input id="password" name="pwd" type="password" class="form-control input-md">
               </div>
           </div>
 
           <!-- Button -->
           <div class="form-group">
-            <label class="col-md-4 control-label" for="singlebutton"></label>
+            <label class="col-md-4 control-label" for="button"></label>
               <div class="col-md-4">
-                <button type="submit" id="singlebutton" class="btn btn-success">Inscription</button>
+                <button type="submit" id="button" class="btn btn-success">Inscription</button>
               </div>
           </div>
               
